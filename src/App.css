@@ -1,0 +1,42 @@
+*,
+*::after,
+*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--text-dark);
+    background-color: var(--primary);
+}
+
+ul, li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+:root{
+    --primary:#f2f2f2;
+    --secondary: #fcfcfc;
+    --tertiary: #515bb6;
+    --light-color: #eeeeee;
+    --text-dark: #333333;
+}
+
+/* ============================== Container ============================== */
+
+.container{
+    max-width: 1500px;
+    width: 90%;
+    margin: 0 auto;
+}
