@@ -12,9 +12,10 @@
 
 .filterWrap{
     border: 2px solid var(--light-color);
-    padding: 1rem 4rem;
+    padding: 0.7rem 3.5rem;
     border-radius: 3rem;
     margin: 1rem 1rem 0 0;
+    cursor: pointer;
 }
 
 .selected{
