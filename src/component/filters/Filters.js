@@ -5,7 +5,6 @@ import food from '../../assets/dataset.json'
 
 const Filters = () => {
     const [items, setItems] = useState('')
-    console.log(items)
 
     return (
         <section className='container'>
