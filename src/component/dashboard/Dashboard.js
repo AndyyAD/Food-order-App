@@ -8,23 +8,25 @@ import Beer from './Beer.png'
 
 function Dashboard() {
     const [items, setItems] = useState('');
-    const [toggle, setToggle] = useState('');
+    const [toggle1, setToggle1] = useState('');
+
 
     const toggleBTN = (index) => {
         setItems(index)
-        setToggle(index)
+        setToggle1(index)
     }
+
 
     return (
         <>
             <section className='container'>
                 <div className='filterWrapper'>
-                    <div className={`filterWrap ${toggle === '' ? "selected" : null}`} onClick={() => toggleBTN('')}>
+                    <div className={`filterWrap ${toggle1 === '' ? "selectedFood" : null}`} onClick={() => toggleBTN('')}>
                         <p className="filters"> All </p>
                     </div>
                     {
                         food.labels.map((data) => (
-                            <div className={`filterWrap ${toggle === data.label ? "selected" : null}`} key={data.id} onClick={() => toggleBTN(data.label)}>
+                            <div className={`filterWrap ${toggle1 === data.label ? "selectedFood" : null}`} key={data.id} onClick={() => toggleBTN(data.label)}>
                                 <p className="filterName"> {data.label} </p>
                             </div>
                         ))
@@ -47,13 +49,22 @@ function Dashboard() {
                                             <h1 className="foodDesc"> {data.description} </h1>
                                             <p className="starter"> <strong>Starter:</strong> {data.starter} </p>
                                             <p className="desert"> <strong>Desert:</strong> {data.desert} </p>
-                                            <p className="drinks"> <strong>Selected drink:</strong> </p>
+                                            <p className="drinks"> <strong>Selected drink:</strong>  </p>
                                             <div className="moreInfo">
                                                 <div className="drinkImgWrapper">
-                                                    <img className="drinkImg" src={Wine} alt="Glass of wine"/>
-                                                    <img className="drinkImg" src={Juice} alt="Glass of juice"/>
-                                                    <img className="drinkImg" src={Beer} alt="Mug of beer"/>
-                                                </div>
+                                                    <img 
+                                                        className={`drinkImg`} 
+                                                        src={Wine} alt="Glass of wine" 
+                                                    />
+                                                    <img 
+                                                        className={`drinkImg`} 
+                                                        src={Juice} alt="Glass of juice" 
+                                                    />
+                                                    <img 
+                                                        className={`drinkImg`} 
+                                                        src={Beer} alt="Mug of beer" 
+                                                    />
+                                                </div>  
                                                 <div className="order">
                                                     <h1 className='price'> ${data.price} </h1>
                                                     <button className='submitBTN'> Select </button>

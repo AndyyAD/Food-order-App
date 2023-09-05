@@ -22,7 +22,7 @@
     background-color: var(--primary);
 }
 
-.selected{
+.selectedFood{
     border: 2px solid var(--tertiary);
     background-color: var(--light-color);
     color: var(--tertiary);
@@ -97,6 +97,6 @@
     background-color: var(--primary);
 }
 
-.selected{
+.selectedDrink{
     border: 3px solid var(--tertiary);
 }
