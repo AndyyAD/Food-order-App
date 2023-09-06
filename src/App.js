@@ -1,12 +1,12 @@
 import './App.css';
-import Dashboard from './component/dashboard/Dashboard';
+import Filterbox from './component/filter/Filterbox';
 import Pricebox from './component/pricebox/Pricebox';
 
 function App() {
     return (
         <>
             <div className="main container">
-                <Dashboard />
+                <Filterbox />
                 <Pricebox />
             </div>
         </>
