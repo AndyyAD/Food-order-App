@@ -1,0 +1,63 @@
+.mainPriceWrapper{
+    margin: 2rem 0 0 3rem;
+    width: 35%;
+}
+
+.flight{
+    rotate: 90deg;
+    margin-right: 1rem;
+    width: 2rem;
+    opacity: 40%;
+}
+
+.orderDis, .foodSelected{
+    background-color: var(--secondary);
+    border: 2px solid var(--tertiary);
+}
+
+.orderDis{
+    border-left-width: 4px;
+    border-bottom-width: 0px;
+    height: 7rem;
+    line-height: 2rem;
+    padding: 1.5rem 0 1.5rem 2rem;
+}
+
+.route{
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.duration{
+    font-size: 1.3rem;
+    opacity: 60%;
+}
+
+.infoHead, .pass1, .pass2{
+    display: flex;
+}
+
+.infoHead, .foodSelected{
+    margin-bottom: 2rem;
+}
+
+.pass1, .pass2{
+    justify-content: space-between;
+    height: 7rem;
+    padding: 2.2rem;
+}
+
+.pass1{
+    border-bottom:  2px solid var(--tertiary);
+}
+
+.priceWrapper p{
+    font-size: 1.7rem;
+    font-weight: 600;;
+}
+
+.priceWrapper p span{
+    font-size: 3rem;
+    margin-left: 3rem;
+    font-weight: 700;
+}

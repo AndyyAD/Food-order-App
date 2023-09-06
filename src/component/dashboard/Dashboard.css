@@ -1,9 +1,12 @@
+.dashboard{
+    width: 65%;
+}
+
 .filterWrapper{
     display: flex;
     flex-wrap: wrap;
     background-color: var(--secondary);
     padding: 2.5rem;
-    width: 60%;
     height: auto;
     margin-top: 2rem;
     border-radius: 2rem 2rem 0 0;
@@ -32,7 +35,6 @@
 
 .dashboardWrapper{
     background-color: var(--secondary);
-    width: 60%;
     padding: 3rem;
 }
 
