@@ -26,3 +26,26 @@
     background-color: var(--light-color);
     color: var(--tertiary);
 }
+
+/* ============================== Pagination ============================== */
+
+.pagination{
+    display: flex;
+    justify-content: flex-end;
+    background-color: var(--secondary);
+    padding: 3rem;
+    margin-top: .5rem;
+}
+
+.pageNo{
+    padding: .1rem 1rem;
+    border: 3px solid var(--primary);
+    border-radius: .5rem;
+    cursor: pointer;
+    margin-right: 1.5rem;
+}
+
+.active{
+    border: 3px solid var(--tertiary);
+    color: var(--tertiary)
+}

@@ -7,7 +7,14 @@ import Dashboard from '../dashboard/Dashboard'
 const Filterbox = () => {
     const [items, setItems] = useState(food.meals);
     const [toggle1, setToggle1] = useState('all');
-    console.log(toggle1)
+
+    const [currPage, setCurrPage] = useState(1);
+    const itemPerPage = 3;
+    const last = itemPerPage * currPage;
+    const first = last - itemPerPage;
+    const itemInPage = items.slice(first, last);
+    const npage = Math.ceil(items.length / itemPerPage);
+    const numbers = [...Array(npage + 1).keys()].slice(1);
 
     const toggleBTN = (index, id) => {
         const updatedItems = food.meals.filter((item) => {
@@ -15,6 +22,10 @@ const Filterbox = () => {
         })
         setItems(updatedItems)
         setToggle1(id)
+    }
+
+    const changePage = (number) => {
+        setCurrPage(number);
     }
 
     return (
@@ -36,7 +47,16 @@ const Filterbox = () => {
                         ))
                     }
                 </div>
-                <Dashboard items={items} />
+                <Dashboard items={itemInPage} />
+                <div className="pagination">
+                    {
+                        numbers.map((number, index) => (
+                            <div className={`pageNo ${currPage === number ? "active" : null}`} key={index} onClick={() => changePage(number)}>
+                                <p> {number} </p>
+                            </div>
+                        ))
+                    }
+                </div>
             </section>
         </>
     )
