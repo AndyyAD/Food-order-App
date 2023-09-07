@@ -61,3 +61,12 @@
     margin-left: 3rem;
     font-weight: 700;
 }
+
+/* ============================== Media queries ============================== */
+
+@media (max-width: 1200px) {
+    .mainPriceWrapper{
+        margin-bottom: 5rem;
+        width: 80%;
+    }
+}

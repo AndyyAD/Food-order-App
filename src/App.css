@@ -44,3 +44,18 @@ a{
 .main{
     display: flex;
 }
+
+
+/* ============================== Media queries ============================== */
+
+@media (max-width: 1200px) {  
+    .main{
+        display: block;
+    }
+}
+
+@media (max-width: 800px) {
+    html{
+        font-size: 50%;
+    }
+}
