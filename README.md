@@ -30,5 +30,6 @@ It's a long and nested code so I have tried to describe every element using its 
 You may find few bugs in this website which I have not been able to solve due to time bound issues. But i hope you like my project. I did change a little bit of it but those were not any major changes. Hope you like it.
 
 ## Preview
-![image](https://github.com/AndyyAD/Food-order-App/assets/80671044/8891403b-d571-40dd-b2c7-0a2e3b25d334)
+![image](https://github.com/AndyyAD/Food-order-App/assets/80671044/de40dae3-fc72-435f-8a9b-c9e3c021b0f2)
+
 
