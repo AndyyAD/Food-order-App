@@ -21,6 +21,9 @@ To use this website in your machine local environment
 
 It's a long and nested code so I have tried to describe every element using its class name. If you get confused check out the class name of the element.
 
+## How to navigate the code
+When you open the main folder (src) you'll find a component folder which will have three more folder. The main folder of those three is the filterbox (yeah I know it should be the dashboard one). Inside you will find seperate CSS and JS folder for all three. The dashboard and pricebox is imported to filterbox to make it easier to write the code. Every file is arranged and kept in their respectative folders. So, I don't think it will be a problem for you to navigate.
+
 ## Features
 1) Responsive
 2) Implemented Pagination
