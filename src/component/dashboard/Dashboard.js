@@ -6,7 +6,7 @@ import Wine from './Wine.png'
 import Juice from './Juice.png'
 import Beer from './Beer.png'
 
-function Dashboard({ items }) {
+function Dashboard(props) {
     const [name, setName] = useState('')
     const [price, setPrice] = useState(0)
     const [mainId, setMainId] = useState('')
@@ -46,10 +46,14 @@ function Dashboard({ items }) {
         setToggle1(toggle1 => !toggle1)
     }
 
+    const handleClick = (order, dname, tprice) => {
+        props.getData(order, dname, tprice);
+    }
+
     return (
         <div className="dashboardWrapper">
             {
-                items.map((data) => {
+                props.items.map((data) => {
                     return (
                         <div className="foodWrapper" key={data.id}>
                             <div>
@@ -77,7 +81,7 @@ function Dashboard({ items }) {
                                     </div>
                                     <div className="order">
                                         <h1 className='price'> ${(data.price + (data.id === mainId ? price : 0)).toFixed(2)} </h1>
-                                        <button className='submitBTN'> Select </button>
+                                        <button className='submitBTN' onClick={() => handleClick(data.title, name, (data.price + price).toFixed(2))}> Select </button>
                                     </div>
                                 </div>
                             </div>

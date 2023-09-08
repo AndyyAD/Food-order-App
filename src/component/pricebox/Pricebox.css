@@ -37,8 +37,13 @@
     display: flex;
 }
 
-.infoHead, .foodSelected{
+.infoText, .foodSelected{
     margin-bottom: 2rem;
+}
+
+.infoText{
+    font-size: 1.4rem;
+    opacity: 40%;
 }
 
 .pass1, .pass2{
@@ -47,7 +52,7 @@
     padding: 2.2rem;
 }
 
-.pass1{
+.pass1, .pass2{
     border-bottom:  2px solid var(--tertiary);
 }
 
@@ -60,6 +65,31 @@
     font-size: 3rem;
     margin-left: 3rem;
     font-weight: 700;
+}
+
+.deselectBTN{
+    padding: 2rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.deselectBTN button {
+    padding: .7rem 2rem;
+    border: 3px solid var(--tertiary);
+    background: transparent;
+    color: var(--tertiary);
+    font-weight: 700;
+    font-size: 1.6rem;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+
+.deselectBTN button:hover{
+    background-color: var(--primary);
+}
+
+.backgroundChange{
+    background-color: var(--primary);
 }
 
 /* ============================== Media queries ============================== */

@@ -50,3 +50,15 @@
     border: 3px solid var(--tertiary);
     color: var(--tertiary)
 }
+
+.main{
+    display: flex;
+}
+
+/* ============================== Media queries ============================== */
+
+@media (max-width: 1200px) {  
+    .main{
+        display: block;
+    }
+}

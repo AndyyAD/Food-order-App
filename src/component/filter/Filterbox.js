@@ -3,6 +3,7 @@ import './Filterbox.css'
 import '../../App.css'
 import food from '../../assets/dataset.json'
 import Dashboard from '../dashboard/Dashboard'
+import Pricebox from '../pricebox/Pricebox'
 
 const Filterbox = () => {
     const [items, setItems] = useState(food.meals);
@@ -16,6 +17,10 @@ const Filterbox = () => {
     const npage = Math.ceil(items.length / itemPerPage);
     const numbers = [...Array(npage + 1).keys()].slice(1);
 
+    const [ordered, setOrdered] = useState('');
+    const [name, setName] = useState('')
+    const [totalPrice, setTotalPrice] = useState('')
+
     const toggleBTN = (index, id) => {
         const updatedItems = food.meals.filter((item) => {
             return item.labels.includes(index);
@@ -28,8 +33,14 @@ const Filterbox = () => {
         setCurrPage(number);
     }
 
+    const getData = (order, dname, tprice) => {
+        setOrdered(order);
+        setName(dname);
+        setTotalPrice(tprice)
+    }
+
     return (
-        <>
+        <section className='main'>
             <section className="dashboard">
                 <div className='filterWrapper'>
                     <div className={`filterWrap ${toggle1 === 'all' ? "selectedFood" : null}`}
@@ -47,7 +58,7 @@ const Filterbox = () => {
                         ))
                     }
                 </div>
-                <Dashboard items={itemInPage} />
+                <Dashboard items={itemInPage} getData={getData}/>
                 <div className="pagination">
                     {
                         numbers.map((number, index) => (
@@ -58,7 +69,8 @@ const Filterbox = () => {
                     }
                 </div>
             </section>
-        </>
+            <Pricebox ordered={ordered} name={name} totalPrice={totalPrice}/>
+        </section>
     )
 }
 
